@@ -1,1 +1,1 @@
-﻿Automation/build.bat clean
+call Automation\build.bat clean

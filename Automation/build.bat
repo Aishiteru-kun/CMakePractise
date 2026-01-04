@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 
 REM check if python is installed
 python --version >nul 2>&1
@@ -14,8 +14,8 @@ if "%~1"=="" (
 )
 
 if "%~2"=="" (
-    python Automation/automation.py %~1
+    python Automation\automation.py %~1
     exit /b 1
 )
 
-python Automation/automation.py %~1 --configuration %~2
+python Automation\automation.py %~1 --configuration %~2

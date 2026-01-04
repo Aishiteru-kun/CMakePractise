@@ -1,1 +1,1 @@
-﻿Automation/build.bat clang_format
+call Automation\build.bat clang_format

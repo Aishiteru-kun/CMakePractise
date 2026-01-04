@@ -1,2 +1,3 @@
-﻿call Automation/build.bat generate Debug
+@echo off
+call Automation/build.bat generate Debug
 call Automation/build.bat generate Release
