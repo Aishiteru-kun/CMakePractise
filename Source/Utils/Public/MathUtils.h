@@ -3,9 +3,9 @@
 
 // clang-format off
 #if defined(WIN32) || defined(_WINDOWS)
-    #ifdef _EXPORTING
+    #if defined(_EXPORTING)
         #define MATH_API __declspec(dllexport)
-    #elif _IMPORTING
+    #elif defined(_IMPORTING)
         #define MATH_API __declspec(dllimport)
     #else
         #define MATH_API

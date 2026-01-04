@@ -8,6 +8,7 @@ int main()
     return 0;
 #endif
 
+    Character().Test();
     Character().PrintStatus();
 
     std::cin.get();
