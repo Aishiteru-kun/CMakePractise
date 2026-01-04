@@ -1,5 +1,5 @@
 # General Information
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.30)
 
 set(PROJECT_NAME CMakePractise)
 set(PROJECT_NAME_TESTS ${PROJECT_NAME}TestRunner)
