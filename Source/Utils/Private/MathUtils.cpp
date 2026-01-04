@@ -1,6 +1,7 @@
 ﻿// MathUtils.cpp
 #include "../Public/MathUtils.h"
 
+#include <random>
 #include <vector>
 
 namespace MathPractise
@@ -28,6 +29,11 @@ std::vector<int> createLargeVector()
 
 int randomInt(int min, int max)
 {
-    return min + (std::rand() % (max - min + 1));
+    std::random_device rd;
+    std::mt19937 gen(rd());
+
+    std::uniform_int_distribution<> dist(min, max);
+
+    return dist(gen);
 }
 }  // namespace MathPractise
