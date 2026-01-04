@@ -16,11 +16,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Setup CMake (>= 4.0)
-      uses: lukka/get-cmake@v3
-      with:
-        cmakeVersion: "4.0.0"
-
     - name: Configure CMake
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
