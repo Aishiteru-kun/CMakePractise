@@ -1,13 +1,20 @@
 ﻿#pragma once
 #include <vector>
 
-#ifdef _EXPORTING
-#define MATH_API __declspec(dllexport)
-#elif _IMPORTING
-#define MATH_API __declspec(dllimport)
+// clang-format off
+#ifdef WIN32 || _WINDOWS
+    #ifdef _EXPORTING
+        #define MATH_API __declspec(dllexport)
+    #elif _IMPORTING
+        #define MATH_API __declspec(dllimport)
+    #else
+        #define MATH_API
+    #endif
 #else
-#define MATH_API
+    #define MATH_API __attribute__((visibility("default")))
 #endif
+// clang-format on
+
 
 namespace MathPractise
 {
